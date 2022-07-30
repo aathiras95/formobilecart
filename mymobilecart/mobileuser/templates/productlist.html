@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<div class="Container">
+  <div class="row">
+
+    <div class="col-12">
+      <table class="table table-bordered border-dark table-striped-columns">
+        <tr class="table-success">
+          <th>Product Image</th>
+          <th>Product Model</th>
+          <th>Name</th>
+          <th>Ram</th>
+          <th>Display</th>
+          <th>Camera</th>
+          <th>Battery</th>
+          <th>Processor</th>
+          <th>Orginal Price</th>
+          <th>Offer Price</th>
+          <th>Warenty</th>
+          <th>Other Spec</th>
+          <th>Action</th>
+        </tr>
+        {%for pro in products%}
+        <tr class="table-danger">
+          <td><img src="{{pro.pro_img.url}}" alt=""></td>
+          <td>{{pro.pro_code}}</td>
+          <td>{{pro.pro_name}}</td>
+          <td>{{pro.pro_ram}}</td>
+          <td>{{pro.pro_dis}}</td>
+          <td>{{pro.pro_camera}}</td>
+          <td>{{pro.pro_battery}}</td>
+          <td>{{pro.pro_processor}}</td>
+           <td>{{pro.pro_price}}</td>
+           <td>{{pro.pro_offprice}}</td>
+          <td>{{pro.pro_warrenty}}</td>
+          <td>{{pro.pro_specification}}</td>
+          <td>
+            <a href="{%url 'pro_edit' pro.pro_code%}">Edit</a>
+            <a href="{%url 'single_product' pro.pro_code %}">View</a>
+            <a href="p_del/{{pro.pro_code}}">Delete</a>
+          </td>
+        </tr>
+        {%endfor%}
+      </table>
+    </div>
+
+    
+    
+    
+    
+    
+  </div>
+  
+  
+  
+  
+</div>
+
+
+</body>
+</html>

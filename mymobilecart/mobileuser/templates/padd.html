@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/sign.css'%}">
+    <!-- font awosome -->
+  <script src="https://kit.fontawesome.com/61d8d73bb4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="page" class="site">
+     <div class="container">
+    <div class="wrapper">
+        <div class="login">
+            <div class="content-heading">
+                <div class="y-style">
+                    <div class="logo">
+                        <a href="#">.Mobile <span>Cart</span></a>
+                    </div>
+                    <div class="welcome">
+                        <h2>Add <br>Product </h2>
+                        <p></p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-form">
+                <div class="y-style">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        {%csrf_token%}
+                        <p>
+                            <label >Category</label>
+                           <input type="text" name="pro_cat" id="id_pro_cat" placeholder="Enter Category" class="form-control">
+                        </p>
+                        <p>
+                            <label >Product Code</label>
+
+                            <input type="text" name="pro_code" id="id_pro_code" placeholder="Enter Code" class="form-control"></p>
+                            <p>
+                            <label >Product Name</label>
+                        <input type="text" name="pro_name" id="id_pro_name" placeholder="Enter Product Name" class="form-control"></p>
+                         <p>
+                            <label >Ram</label>
+                        <input type="text" name="pro_ram" id="id_pro_ram" placeholder="Ram" class="form-control">
+                        </p>
+
+                         <p>
+                            <label >Display</label>
+
+                             <input type="text" name="pro_dis" id="id_pro_dis" placeholder="Display" class="form-control"></p>
+
+                         <p>
+                            <label> Camera</label>
+                        <input type="text" name="pro_camera" id="id_pro_camera" placeholder="Camera" class="form-control"></p>
+
+                         <p>
+                            <label >Battery</label>
+                        <input type="text" name="pro_battery" id="id_pro_battery" placeholder="Battery" class="form-control"></p>
+
+                         <p>
+                            <label >Price</label>
+                        <input type="number" name="pro_price" id="id_pro_price" placeholder="Enter Price" class="form-control"></p>
+                         <p>
+                            <label >Offer Price</label>
+                        <input type="number" name="pro_offprice" id="id_pro_offprice" placeholder="Offer Price" class="form-control"></p>
+
+
+                         <p>
+                            <label >Processor</label>
+                        <input type="text" name="pro_processor" id="id_processor" placeholder="Processor Details" class="form-control"></p>
+
+                         <p>
+                            <label >Warrenty</label>
+                        <input type="text" name="pro_warrenty" id="id_warrenty" placeholder="Warrenty" class="form-control"></p>
+
+                         <p>
+                            <label >Other Spec</label>
+                        <input type="text" name="pro_specification" id="id_pro_specification" placeholder="Other Spec" class="form-control"></p>
+
+                         <p>
+                            <label >Image</label>
+                        <input type="file" name="pro_img" id="id_pro_img"></p>
+
+                        <p><button type="submit">Add Product</button> </p>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        </div>
+     </div>
+</div>
+</body>
+</html>
